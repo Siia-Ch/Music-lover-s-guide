@@ -61,7 +61,7 @@
             // 
             labelDuration.AutoSize = true;
             labelDuration.Font = new Font("Segoe UI", 9F, FontStyle.Italic);
-            labelDuration.Location = new Point(370, 39);
+            labelDuration.Location = new Point(370, 68);
             labelDuration.Name = "labelDuration";
             labelDuration.Size = new Size(97, 20);
             labelDuration.TabIndex = 2;
@@ -96,7 +96,7 @@
             // buttonDelete
             // 
             buttonDelete.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            buttonDelete.Location = new Point(427, 73);
+            buttonDelete.Location = new Point(427, 92);
             buttonDelete.Name = "buttonDelete";
             buttonDelete.Size = new Size(38, 38);
             buttonDelete.TabIndex = 7;
@@ -106,7 +106,7 @@
             // buttonEdit
             // 
             buttonEdit.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            buttonEdit.Location = new Point(375, 73);
+            buttonEdit.Location = new Point(370, 92);
             buttonEdit.Name = "buttonEdit";
             buttonEdit.Size = new Size(38, 38);
             buttonEdit.TabIndex = 8;
@@ -130,6 +130,7 @@
             MinimumSize = new Size(527, 260);
             Name = "SongDetailsForm";
             Text = "Про пісню";
+            Load += SongDetailsForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

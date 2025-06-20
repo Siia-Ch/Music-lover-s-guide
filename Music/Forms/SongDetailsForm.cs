@@ -100,5 +100,10 @@ namespace Music.Forms
             var albumForm = new AlbumDetailsForm(album, artist, musicLibrary);
             albumForm.ShowDialog();
         }
+
+        private void SongDetailsForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
