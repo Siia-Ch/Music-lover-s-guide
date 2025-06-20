@@ -37,9 +37,9 @@
             listBoxResults = new ListBox();
             menuStrip1 = new MenuStrip();
             toolStripMenuItem1 = new ToolStripMenuItem();
-            songToolStripMenuItem = new ToolStripMenuItem();
-            artistToolStripMenuItem = new ToolStripMenuItem();
             albumToolStripMenuItem = new ToolStripMenuItem();
+            artistToolStripMenuItem = new ToolStripMenuItem();
+            songToolStripMenuItem = new ToolStripMenuItem();
             albumsToolStripMenuItem = new ToolStripMenuItem();
             artistsToolStripMenuItem = new ToolStripMenuItem();
             songsToolStripMenuItem = new ToolStripMenuItem();
@@ -132,12 +132,12 @@
             toolStripMenuItem1.Size = new Size(73, 24);
             toolStripMenuItem1.Text = "Додати";
             // 
-            // songToolStripMenuItem
+            // albumToolStripMenuItem
             // 
-            songToolStripMenuItem.Name = "songToolStripMenuItem";
-            songToolStripMenuItem.Size = new Size(168, 26);
-            songToolStripMenuItem.Text = "Пісню";
-            songToolStripMenuItem.Click += addSongToolStripMenuItem_Click;
+            albumToolStripMenuItem.Name = "albumToolStripMenuItem";
+            albumToolStripMenuItem.Size = new Size(168, 26);
+            albumToolStripMenuItem.Text = "Альбом";
+            albumToolStripMenuItem.Click += addAlbumToolStripMenuItem_Click;
             // 
             // artistToolStripMenuItem
             // 
@@ -146,32 +146,32 @@
             artistToolStripMenuItem.Text = "Виконавця";
             artistToolStripMenuItem.Click += addArtistToolStripMenuItem_Click;
             // 
-            // albumToolStripMenuItem
+            // songToolStripMenuItem
             // 
-            albumToolStripMenuItem.Name = "albumToolStripMenuItem";
-            albumToolStripMenuItem.Size = new Size(168, 26);
-            albumToolStripMenuItem.Text = "Альбом";
-            albumToolStripMenuItem.Click += addAlbumToolStripMenuItem_Click;
+            songToolStripMenuItem.Name = "songToolStripMenuItem";
+            songToolStripMenuItem.Size = new Size(168, 26);
+            songToolStripMenuItem.Text = "Пісню";
+            songToolStripMenuItem.Click += addSongToolStripMenuItem_Click;
             // 
             // albumsToolStripMenuItem
             // 
             albumsToolStripMenuItem.Name = "albumsToolStripMenuItem";
-            albumsToolStripMenuItem.Size = new Size(78, 24);
-            albumsToolStripMenuItem.Text = "Альбом";
+            albumsToolStripMenuItem.Size = new Size(87, 24);
+            albumsToolStripMenuItem.Text = "Альбоми";
             albumsToolStripMenuItem.Click += albumsToolStripMenuItem_Click;
             // 
             // artistsToolStripMenuItem
             // 
             artistsToolStripMenuItem.Name = "artistsToolStripMenuItem";
-            artistsToolStripMenuItem.Size = new Size(107, 24);
-            artistsToolStripMenuItem.Text = "Виконавець";
+            artistsToolStripMenuItem.Size = new Size(95, 24);
+            artistsToolStripMenuItem.Text = "Виконавці";
             artistsToolStripMenuItem.Click += artistsToolStripMenuItem_Click;
             // 
             // songsToolStripMenuItem
             // 
             songsToolStripMenuItem.Name = "songsToolStripMenuItem";
-            songsToolStripMenuItem.Size = new Size(62, 24);
-            songsToolStripMenuItem.Text = "Пісня";
+            songsToolStripMenuItem.Size = new Size(58, 24);
+            songsToolStripMenuItem.Text = "Пісні";
             songsToolStripMenuItem.Click += songsToolStripMenuItem_Click;
             // 
             // MainForm
