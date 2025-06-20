@@ -67,9 +67,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(47, 70);
             label2.Name = "label2";
-            label2.Size = new Size(43, 20);
+            label2.Size = new Size(48, 20);
             label2.TabIndex = 4;
-            label2.Text = "Song";
+            label2.Text = "Пісня";
             // 
             // searchButton
             // 
@@ -77,7 +77,7 @@
             searchButton.Name = "searchButton";
             searchButton.Size = new Size(99, 31);
             searchButton.TabIndex = 3;
-            searchButton.Text = "Find";
+            searchButton.Text = "Знайти";
             searchButton.UseVisualStyleBackColor = true;
             searchButton.Click += searchButton_Click;
             // 
@@ -93,10 +93,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(47, 22);
             label1.Name = "label1";
-            label1.Size = new Size(44, 20);
+            label1.Size = new Size(93, 20);
             label1.TabIndex = 1;
-            label1.Text = "Artist";
-            label1.Click += label1_Click;
+            label1.Text = "Виконавець";
             // 
             // textBoxArtist
             // 
@@ -113,6 +112,7 @@
             listBoxResults.Name = "listBoxResults";
             listBoxResults.Size = new Size(707, 264);
             listBoxResults.TabIndex = 2;
+            listBoxResults.DoubleClick += listBoxResults_DoubleClick;
             // 
             // menuStrip1
             // 
@@ -123,56 +123,55 @@
             menuStrip1.Size = new Size(791, 28);
             menuStrip1.TabIndex = 3;
             menuStrip1.Text = "menuStrip1";
-            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.Alignment = ToolStripItemAlignment.Right;
-            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { songToolStripMenuItem, artistToolStripMenuItem, albumToolStripMenuItem });
+            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { albumToolStripMenuItem, artistToolStripMenuItem, songToolStripMenuItem });
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(33, 24);
-            toolStripMenuItem1.Text = "+";
+            toolStripMenuItem1.Size = new Size(73, 24);
+            toolStripMenuItem1.Text = "Додати";
             // 
             // songToolStripMenuItem
             // 
             songToolStripMenuItem.Name = "songToolStripMenuItem";
-            songToolStripMenuItem.Size = new Size(136, 26);
-            songToolStripMenuItem.Text = "Song";
-            songToolStripMenuItem.Click += searchButton_Click;
+            songToolStripMenuItem.Size = new Size(168, 26);
+            songToolStripMenuItem.Text = "Пісню";
+            songToolStripMenuItem.Click += addSongToolStripMenuItem_Click;
             // 
             // artistToolStripMenuItem
             // 
             artistToolStripMenuItem.Name = "artistToolStripMenuItem";
-            artistToolStripMenuItem.Size = new Size(136, 26);
-            artistToolStripMenuItem.Text = "Artist";
-            artistToolStripMenuItem.Click += searchButton_Click;
+            artistToolStripMenuItem.Size = new Size(168, 26);
+            artistToolStripMenuItem.Text = "Виконавця";
+            artistToolStripMenuItem.Click += addArtistToolStripMenuItem_Click;
             // 
             // albumToolStripMenuItem
             // 
             albumToolStripMenuItem.Name = "albumToolStripMenuItem";
-            albumToolStripMenuItem.Size = new Size(136, 26);
-            albumToolStripMenuItem.Text = "Album";
-            albumToolStripMenuItem.Click += searchButton_Click;
+            albumToolStripMenuItem.Size = new Size(168, 26);
+            albumToolStripMenuItem.Text = "Альбом";
+            albumToolStripMenuItem.Click += addAlbumToolStripMenuItem_Click;
             // 
             // albumsToolStripMenuItem
             // 
             albumsToolStripMenuItem.Name = "albumsToolStripMenuItem";
-            albumsToolStripMenuItem.Size = new Size(73, 24);
-            albumsToolStripMenuItem.Text = "Albums";
+            albumsToolStripMenuItem.Size = new Size(78, 24);
+            albumsToolStripMenuItem.Text = "Альбом";
             albumsToolStripMenuItem.Click += albumsToolStripMenuItem_Click;
             // 
             // artistsToolStripMenuItem
             // 
             artistsToolStripMenuItem.Name = "artistsToolStripMenuItem";
-            artistsToolStripMenuItem.Size = new Size(64, 24);
-            artistsToolStripMenuItem.Text = "Artists";
+            artistsToolStripMenuItem.Size = new Size(107, 24);
+            artistsToolStripMenuItem.Text = "Виконавець";
             artistsToolStripMenuItem.Click += artistsToolStripMenuItem_Click;
             // 
             // songsToolStripMenuItem
             // 
             songsToolStripMenuItem.Name = "songsToolStripMenuItem";
-            songsToolStripMenuItem.Size = new Size(63, 24);
-            songsToolStripMenuItem.Text = "Songs";
+            songsToolStripMenuItem.Size = new Size(62, 24);
+            songsToolStripMenuItem.Text = "Пісня";
             songsToolStripMenuItem.Click += songsToolStripMenuItem_Click;
             // 
             // MainForm
@@ -185,9 +184,11 @@
             Controls.Add(menuStrip1);
             ForeColor = SystemColors.ControlLightLight;
             MainMenuStrip = menuStrip1;
+            MaximizeBox = false;
+            MaximumSize = new Size(809, 545);
             MinimumSize = new Size(809, 545);
             Name = "MainForm";
-            Text = "MainForm";
+            Text = "Головна";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             menuStrip1.ResumeLayout(false);

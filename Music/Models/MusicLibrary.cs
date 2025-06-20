@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Text.Json;
 
 namespace Music.Models
 {
     public class MusicLibrary
     {
-        public List<Artist> Artists { get; private set; }
+        public List<Artist> Artists { get; set; } = new List<Artist>();
 
         public MusicLibrary()
         {
-            Artists = new List<Artist>();
-            InitializeTestData();
+
         }
 
         private void InitializeTestData()
@@ -57,6 +58,35 @@ namespace Music.Models
 
             Artists.Add(artist1);
             Artists.Add(artist2);
+        }
+        public void SaveToFile(string path)
+        {
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            File.WriteAllText(path, JsonSerializer.Serialize(this, options));
+        }
+
+        public static MusicLibrary LoadFromFile(string path)
+        {
+            try
+            {
+                if (!File.Exists(path))
+                {
+                    var library = new MusicLibrary();
+                    library.InitializeTestData();
+                    return library;
+                }
+
+                string json = File.ReadAllText(path);
+                var libraryFromFile = JsonSerializer.Deserialize<MusicLibrary>(json);
+
+                return libraryFromFile ?? new MusicLibrary();
+            }
+            catch
+            {
+                var fallbackLibrary = new MusicLibrary();
+                fallbackLibrary.InitializeTestData();
+                return fallbackLibrary;
+            }
         }
     }
 }
